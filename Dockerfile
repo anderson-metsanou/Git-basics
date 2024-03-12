@@ -1,8 +1,8 @@
-# Utiliser une image de base Ngnix
+# Utiliser une image de base apache
 FROM httpd:latest
 RUN apt-get update && apt-get install -y apache2
 # Créer le repertoire ou stocker les dépendences de l'application
-#WORKDIR /app
+WORKDIR /app
 
 # Copier les fichiers HTML, CSS, JavaScript et les fichiers images associés dans le conteneur
 COPY . /usr/local/apache2/htdocs/
